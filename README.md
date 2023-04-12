@@ -1,3 +1,19 @@
+## Data
+Download the librispeech [data](https://drive.google.com/file/d/1WYfgr31T-PPwMcxuAq09XZfHQO5Mw8fE/view) from https://github.com/CorentinJ/librispeech-alignments.
+Then unzip the data into the directory Librispeech. The directory should look like 
+```
+speech_diff/
+    Librispeech/
+        dev-clean/
+        dev-other/
+        ...
+```
+Then run the following command to extract the texts:
+```sh
+mkdir datasets
+python tools/extract_sentence.py
+```
+
 ## Train the model (optional)
 ```sh
 bash scripts/train.sh
